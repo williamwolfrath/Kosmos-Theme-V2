@@ -1,0 +1,32 @@
+/* SEARCH BOX */
+form#search-block-form .search-box { width: 193px; height: 24px; }
+form#search-block-form .search-box label { display: none; }
+form#search-block-form .search-box input.form-text { background: url(../images/search-box-left.jpg) no-repeat; width: 159px; height: 24px; border: none; margin: 0; padding-left: 7px; color: #25928c; line-height: 24px; }
+form#search-block-form .search-box .form-submit { position: relative; left: -8px; }
+
+
+/* HEADINGS */
+body.front h2, body.front h3 { color: #6e6e6e; }
+
+/* CONTENT */
+a, a:visited { color: #25928c; text-decoration: underline; }
+.colored-text { color: #25928c; }
+p { color: #454545; }
+#why-join ul li { background: url(../images/bullet.jpg) left center no-repeat; font-size: 1.4em; color: #6e6e6e; font-weight: bold; padding: 3px 0 3px 28px; }
+
+
+/* FEATURED POSTS */
+body.front .recent-posts-content { background: url(../images/balloon.jpg) no-repeat; height: 111px; padding-top: 5px; padding-left: 35px; margin-left: 60px; }
+#front-featured-posts h2.pane-title { font-size: 2.0em; color: #464646; margin-bottom: 15px;  }
+.recent-posts-content h2 a  { font-size: 1.05em; font-weight: bold;  text-decoration: none; }
+
+/* PANELS */
+body.front .panel-col-first ul.menu { text-transform: uppercase; margin-bottom: 40px; }
+body.front .panel-col p { font-size: 1.2em; }
+body.front .panel-col-first ul.menu li.leaf a, body.front .panel-col-first ul.menu li.leaf a:visited { color: #454545; text-decoration: none; }
+body.front .panel-col ul { list-style: none; margin: 0; padding: 0; }
+
+
+/* FOOTER */
+#footer ul.menu li.leaf a, #footer ul.menu li.leaf a:visited  { color: #7e7e7e; text-decoration: none; }
+#footer ul.menu li.expanded>a, #footer ul.menu li.expanded>a:visited { color: #030303; text-decoration: none; }

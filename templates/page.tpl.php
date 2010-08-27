@@ -82,13 +82,15 @@
 <head>
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
-  <?php print $styles; ?>
-  <!--[if IE 7]>
-		<link rel="stylesheet" href="/sites/all/themes/SpontaneousAcademia/style-IE7.css" type="text/css" media="all" />
-	<![endif]-->
+  
+      <link rel="stylesheet" href="/sites/all/themes/Kosmos/css/blueprint/screen.css" type="text/css" media="screen, projection">
+      <link rel="stylesheet" href="/sites/all/themes/Kosmos/css/blueprint/src/grid.css" type="text/css" media="screen, projection">
+      <link rel="stylesheet" href="/sites/all/themes/Kosmos/css/blueprint/src/typography.css" type="text/css" media="screen, projection">
+      <link rel="stylesheet" href="/sites/all/themes/Kosmos/css/blueprint/print.css" type="text/css" media="print">	
+	<!--[if lt IE 8]><link rel="stylesheet" href="/sites/all/themes/Kosmos/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+      <?php print $styles; ?>
 	<!--[if IE 6]>
 	        <script type="text/javascript" src="/unitpngfix.js"></script>
-		<link rel="stylesheet" href="/sites/all/themes/SpontaneousAcademia/style-IE6.css" type="text/css" media="all" />
 	<![endif]-->
   <script src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/en_US" type="text/javascript"></script> <!-- make sure this loads before others that need it! -->
   <script type="text/javascript">
@@ -96,11 +98,20 @@
 //FB.init("990f0319a7449a516ee2032d33478742", "xd_receiver.htm", {"reloadIfSessionStateChanged":true});
 //FB.init("990f0319a7449a516ee2032d33478742");
 </script>
+  <script src="/sites/all/themes/Kosmos/js/cufon.js" type="text/javascript"></script>
+  <script src="/sites/all/themes/Kosmos/js/Myriad_Pro_400.font.js" type="text/javascript"></script>
+  <script src="/sites/all/themes/Kosmos/js/Gill_Sans_MT_Pro_500.font.js" type="text/javascript"></script>
   <?php print $scripts; ?>
   <?php if ($is_front): ?>
     <script type="text/javascript" src="http://www.trumba.com/scripts/spuds.js"></script>
   <?php endif; ?>
   <script type="text/javascript"><?php /* Needed to avoid Flash of Unstyled Content in IE */ ?> </script>
+  <script type="text/javascript">
+    Cufon.replace('h1', {fontFamily: 'Myriad Pro'});
+    Cufon.replace('h2', {fontFamily: 'Myriad Pro'})
+    Cufon.replace('h3', {fontFamily: 'Myriad Pro'});
+    Cufon.replace('body.front .panel-col-first ul.menu li', {fontFamily: 'Gill Sans MT Pro'});
+  </script>  
 </head>
 
 
@@ -111,53 +122,27 @@
   FB.init('<?php print variable_get("safacebook_api_key", ""); ?>', "/xd_receiver.htm");
 </script>
 
-
- <div id="beta">BETA</div>
  
   <div id="page">
     <div id="page-inner">
     <div id="header">
-      
-      <div id="logo-title">
+      <div id="header-inner">
 
-        <?php if (!empty($logo)): ?>
-          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-            <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-          </a>
-        <?php endif; ?>
+	  <div id="logo-title">
+	    <?php if (!empty($logo)): ?>
+		<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
+	    <?php endif; ?>
+	  </div> <!-- /logo-title -->
+	  
+	  <div id="login-reg"><a id="login-link" href="/user"><img src="/sites/all/themes/Kosmos/images/login-link.jpg"/></a><a id="reg-link" href="/user/register"><img src="/sites/all/themes/Kosmos/images/reg-link.jpg"/></a></div>
+	  <?php if (!empty($header)): ?>
+		<?php print $header; ?>
+	  <?php endif; ?>
 
-        <div id="name-and-slogan">
-          <?php if (!empty($site_name)): ?>
-            <h1 id="site-name">
-              <a href="<?php print $front_page ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-            </h1>
-          <?php endif; ?>
-
-          <?php if (!empty($site_slogan)): ?>
-            <div id="site-slogan"><?php print $site_slogan; ?></div>
-          <?php endif; ?>
-        </div> <!-- /name-and-slogan -->
-      </div> <!-- /logo-title -->
-
-      <?php if (!empty($header)): ?>
-        <div id="header-region">
-          <div id="temp-home-link"><a href="/">&nbsp;</a></div>
-	   <?php if ($is_front): ?>
-             <div class="front-page-header-text">
-                 <div class="node">
-                 <div class="content">Advance a free society. Further your research and teaching. Get inspiration and advice. Create a profile and browse our listings of opportunities, resources, events, groups and more.
-                 </div>
-                 </div>
-             </div>
-          <?php endif; ?>
-          <?php print $header; ?>
-        </div>
-      <?php endif; ?>
-
+      </div>
     </div> <!-- /header -->
 
-    <div id="container" class="clear-block">
-      <div id="colors-bg-image"></div>
+    <div id="container" class="clear-block container"><div id="container-inner">
       <div id="navigation" class="menu <?php if (!empty($primary_links)) { print "withprimary"; } if (!empty($secondary_links)) { print " withsecondary"; } ?> ">
         <?php if (!empty($breadcrumb)): ?><div id="breadcrumb"><?php print $breadcrumb; ?></div><?php endif; ?>
 	<?php print $navbar; ?>
@@ -167,13 +152,6 @@
           <?php //if (!empty($content_top)): ?>
             <div id="content-top" class="clear-block">
               <?php if (!empty($title)): ?><h1 class="title" id="page-title"><?php print $title; ?>
-		      <span id="feed-icons"><?php print $feed_icons; ?>
-		      <?php if ($is_front): ?>
-			  <a class="feed-icon" href="/recent-updates/feed">
-			      <img width="16" height="16" title="Recent Updates" alt="Recent Updates" src="/misc/feed.png">
-			  </a>
-		      <?php endif; ?>
-		      </span>
 	      </h1><?php endif; ?>
              <?php print $content_top; ?>
             </div>
@@ -233,11 +211,11 @@
 
 
 
-
+    </div> <!-- container-inner -->
     </div> <!-- /container -->
 
-    <div id="footer-wrapper">
-      <div id="footer">
+    <div id="footer-wrapper" >
+      <div id="footer" class="container">
         <?php print $footer_message; ?>
         <?php if (!empty($footer)): print $footer; endif; ?>
       </div> <!-- /footer -->

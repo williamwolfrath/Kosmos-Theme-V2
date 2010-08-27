@@ -33,10 +33,10 @@
  */
 ?>
 <div class="search-box">
+  <?php //dsm($search); ?>
   <?php //log_debug("search: ", $search); ?>
   <?php //print $search_form; ?>
   <?php print $search['search_block_form']; ?>
   <?php print $search['submit']; ?>
   <?php print $search['hidden']; ?>
-  <input type="hidden" name="type[flv_upload]" id="edit-type-flv_upload" value="flv_upload"/>
 </div>

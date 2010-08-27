@@ -71,9 +71,6 @@ else {
 <div class="recent-post-user-picture-wrapper">
 <div class="recent-post-user-picture">
    <div class="recent-post-user-picture-inner">
-   <div class="post-count">
-     <?php print user_stats_get_stats('post_count', $node->uid); ?>
-  </div>
   <?php //print $picture ?>
   <?php
    $recent_post_user = user_load($uid);
@@ -89,16 +86,10 @@ else {
  </div>
 
   <div class="recent-post-user-name">
-    <?php if ( $recent_post_user->name == "SarahFriederich") {
-      print "Sarah Friederich";
-    }
-    else {
-      print $recent_post_user->name; 
-    }
-    ?>
+      <?php print $recent_post_user->name; ?>
   </div>
   <div class="recent-post-user-type">
-     <?php print $recent_post_user->user_type; ?>
+     <?php //print $recent_post_user->user_type; ?>
   </div>
 </div>
 </div>
@@ -120,10 +111,15 @@ else {
   </div>
 
   <div class="content">
+    <?php
+            if ( strlen($content) > 350 ) {
+                  $content = substr($content, 0, 350) . '...' ;
+            }
+      ?>
     <?php print $content ?>
-    <?php if ($teaser): ?>
-    <div class="node-more-link"><?php print l('More', $node->path); ?></div>
-  <?php endif; ?>
+      <?php if ($teaser): ?>
+            <span class="node-more-link"><?php print l('read more', $node->path); ?></span>
+      <?php endif; ?>
   </div>
   
   
