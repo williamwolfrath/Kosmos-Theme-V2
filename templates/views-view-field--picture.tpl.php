@@ -20,5 +20,4 @@
   * the view is modified.
   */
 ?>
-<?php dpm($view); ?>
 <?php print $output; ?>

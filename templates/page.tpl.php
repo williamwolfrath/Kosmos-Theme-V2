@@ -109,8 +109,8 @@
   <script type="text/javascript">
     Cufon.replace('h1', {fontFamily: 'Myriad Pro'});
     Cufon.replace('h2', {fontFamily: 'Myriad Pro'})
-    Cufon.replace('h3', {fontFamily: 'Myriad Pro'});
-    Cufon.replace('body.front .panel-col-first ul.menu li', {fontFamily: 'Gill Sans MT Pro'});
+    Cufon.replace('h3.pane-title', {fontFamily: 'Myriad Pro'});
+    Cufon.replace('.panel-col-first ul.menu li', {fontFamily: 'Gill Sans MT Pro'});
   </script>  
 </head>
 
@@ -144,13 +144,13 @@
 
     <div id="container" class="clear-block container"><div id="container-inner">
       <div id="navigation" class="menu <?php if (!empty($primary_links)) { print "withprimary"; } if (!empty($secondary_links)) { print " withsecondary"; } ?> ">
-        <?php if (!empty($breadcrumb)): ?><div id="breadcrumb"><?php print $breadcrumb; ?></div><?php endif; ?>
 	<?php print $navbar; ?>
         <!-- secondary links normally go here -->
       </div> <!-- /navigation -->
       
           <?php //if (!empty($content_top)): ?>
             <div id="content-top" class="clear-block">
+	       <?php if (!empty($messages)): print $messages; endif; ?>
               <?php if (!empty($title)): ?><h1 class="title" id="page-title"><?php print $title; ?>
 	      </h1><?php endif; ?>
              <?php print $content_top; ?>
@@ -172,7 +172,7 @@
         <div id="content">
           <?php if (!empty($content_prefix)) { print $content_prefix; } ?>
           <?php if (!empty($tabs)): ?><div class="tabs"><?php print $tabs; ?></div><?php endif; ?>
-          <?php if (!empty($messages)): print $messages; endif; ?>
+         
           <?php if (!empty($help)): print $help; endif; ?>
           
           <?php if ($is_front): ?>

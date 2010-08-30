@@ -9,10 +9,18 @@
 form#search-block-form .search-box .form-item { margin: 0; float: left; }
 
 
+/* PAGE */
+body.sidebar-right #main { width: 680px; margin-right: 20px; float: left; }
+body.sidebar-right #sidebar-right { width: 210px; float: left; text-align: right; }
+
+
 /* LISTS */
 ul.menu { padding: 0; margin: 0; }
 ul.menu li { list-style: none; margin: 0; }
 
+
+/* CONTENT TOP */
+#content-top { margin-bottom: 20px; }
 
 /* MAIN */
 #main { margin: 0; }
@@ -20,7 +28,7 @@ ul.menu li { list-style: none; margin: 0; }
 
 /* CONTAINER */
 #page #container { background: url(../images/page-bg.jpg) top left no-repeat; }
-#page #container #container-inner { padding: 20px 0 0 30px; }
+#page #container #container-inner { padding: 5px 0 0 30px; }
 
 
 /* FOOTER */
@@ -31,13 +39,17 @@ div#footer-wrapper { background:url(../images/footer-bg.jpg) no-repeat scroll ce
 
 
 /* PANELS */
-body.front .panel-3col .panel-col-first, body.front .panel-3col .panel-col-last { width: 20%; }
-body.front .panel-3col .panel-col { width: 60%; }
-body.front .panel-3col .panel-col .inside { padding-right: 20px; }
-body.front .panel-3col .panel-col .inside { margin: 0; }
-body.front .panel-col-first .panel-pane h2.pane-title { margin: 0; color: #25928c; font-size: 1.1em; }
-body.front .panel-3col .panel-col .panel-separator { margin: 0; }
+.panel-3col .panel-col-first, .panel-3col .panel-col-last { width: 20%; }
+.panel-3col .panel-col { width: 60%; }
+.panel-3col .panel-col .inside { padding-right: 20px; }
+.panel-3col .panel-col .inside { margin: 0; }
+.panel-col-first .panel-pane h2.pane-title { margin: 0; color: #25928c; font-size: 1.1em; }
+.panel-3col .panel-col .panel-separator { margin: 0; clear:both; }
 #why-join { margin: 20px 0 30px 0; }
+body.page-node .panel-col .panel-separator { margin-bottom: 40px; }
+.panels-related-content .item-list ul li { display: block; width: 30%; float: left; padding: 0 5px; }
+
+
 
 /* POSTS */
 .recent-post-user-picture-wrapper { float: left; width: 70px; }
@@ -45,3 +57,29 @@ body.front .panel-3col .panel-col .panel-separator { margin: 0; }
 
 /* VIEWS */
 .view-recent-posts .views-row-odd, .view-recent-posts .views-row-even { margin-bottom: 20px; }
+
+
+/* NODES */
+body.page-node .node .facebook-user-picture { width: 60px; float: right; margin: 0 0 10px 10px; }
+.node .facebook-user-picture { line-height: 1.0em; }
+.node p { line-height: 1.2em;}
+body.page-node .panel-col .node .content { margin-top: 20px; }
+.node .terms ul.links li { padding: 0; }
+.node .content { margin-bottom: 20px; }
+
+
+/* COMMENTS */
+body.page-node .comment .facebook-user-picture { float: left; width: 70px; }
+.comment-content-wrapper { background: #feffe5 url(../images/balloon-pixel.jpg) 0 0 repeat-x; min-height: 78px; position: relative; }
+.bl { background: url(../images/bl.jpg) 0 100% no-repeat; min-height: 78px; }
+.br { background: url(../images/br.jpg) 100% 100% no-repeat; }
+.tl { background: url(../images/tl.jpg) 0 0 no-repeat; min-height: 78px;  }
+.tr { background: url(../images/tr.jpg) 100% 0 no-repeat; padding: 10px 10px 5px 30px;  }
+.b { background: url(../images/balloon-pixel.jpg) 0 100% repeat-x; }
+.l { background: url(../images/balloon-pixel-left.jpg) 0 0 repeat-y; }
+.r { background: url(../images/balloon-pixel.jpg) 100% 0 repeat-y; }
+.comment .vote-up-down-widget { display: none; float: none; position: absolute; width: 17px; bottom: 0; }
+.comment .vote-points { display: none; }
+.comment .links { padding-left: 70px; margin-bottom: 20px; }
+.comment h3 { margin-bottom: 3px; font-weight: bold; }
+.comment h3 a:link, .comment h3 a:visited { text-decoration: none; }

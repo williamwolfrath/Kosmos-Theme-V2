@@ -30,9 +30,6 @@
   <?php print $picture ?>
 <div class="facebook-user-picture">
   <div class="facebook-user-picture-inner">
-  <div class="post-count">
-     <?php print user_stats_get_stats('post_count', $comment->uid); ?>
-  </div>
   <?php //print $picture ?>
   <?php
     $comment_user = user_load($comment->uid);
@@ -43,29 +40,25 @@
   <div class="post-user-name">
     <?php print $comment_user->name; ?>
   </div>
-  <div class="post-user-type">
-     <?php print $comment_user->user_type; ?>
-  </div>
 </div>
 
   <?php if ($comment->new): ?>
     <span class="new"><?php print $new ?></span>
   <?php endif; ?>
 
-  <h3><?php print $title ?></h3>
+  <div class="comment-content-wrapper"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr">
+      <h3><?php print $title ?></h3>
 
-  <div class="submitted">
-    <?php print $submitted ?>
+      <div class="content">
+        <?php print $content ?>
+        <?php if ($signature): ?>
+          <div class="user-signature clear-block">
+            <?php print $signature ?>
+          </div>
+        <?php endif; ?>
+      </div>
   </div>
-
-  <div class="content">
-    <?php print $content ?>
-    <?php if ($signature): ?>
-    <div class="user-signature clear-block">
-      <?php print $signature ?>
-    </div>
-    <?php endif; ?>
-  </div>
-
+    </div></div></div></div></div></div></div>
   <?php print $links ?>
+
 </div>

@@ -52,9 +52,6 @@
 
 <div class="facebook-user-picture">
    <div class="facebook-user-picture-inner">
-   <div class="post-count">
-     <?php print user_stats_get_stats('post_count', $node->uid); ?>
-  </div>
   <?php //print $picture ?>
   <?php
     $recent_post_user = user_load($uid);
@@ -73,9 +70,9 @@
   <div class="recent-post-user-name">
     <?php print $recent_post_user->name; ?>
   </div>
-  <div class="recent-post-user-type">
-     <?php print $recent_post_user->user_type; ?>
-  </div>
+   <?php if ($submitted): ?>
+    <div class="submitted"><?php print $date; ?><br/><?php print $time; ?><?php //print $submitted ?></div>
+  <?php endif; ?>
 </div>
 
 <?php if (!$page): ?>
@@ -85,9 +82,6 @@
 
   
   <div class="meta">
-  <?php if ($submitted): ?>
-    <span class="submitted"><?php print $date; ?><?php //print $submitted ?></span>
-  <?php endif; ?>
 
   <?php if ($terms): ?>
     <div class="terms terms-inline"><?php print $terms ?></div>

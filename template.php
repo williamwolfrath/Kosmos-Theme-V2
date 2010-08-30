@@ -41,6 +41,10 @@ function Kosmos_preprocess_page(&$vars, $hook) {
 
 
 function Kosmos_preprocess_node(&$vars, $hook) {
+    //dpm($vars);
+    //dd($vars);
+    $vars['date'] = format_date($vars['created'], 'custom', 'n/j/Y');
+    $vars['time'] = format_date($vars['created'], 'custom', 'g:ia');
   // Strip tags from teaser
   if ($vars['teaser']) {
     // $coreteaser is the teaser without extra cck fields
@@ -171,6 +175,83 @@ function Kosmos_breadcrumb($breadcrumb) {
     }
 }
 
+
+function Kosmos_panels_pane($content, $pane, $display) {
+  if (!empty($content->content)) {
+    $idstr = $classstr = '';
+    if (!empty($content->css_id)) {
+      $idstr = ' id="' . $content->css_id . '"';
+    }
+    if (!empty($content->css_class)) {
+      $classstr = ' ' . $content->css_class;
+    }
+
+    $output = "<div class=\"panel-pane$classstr\"$idstr>\n";
+    if (user_access('view pane admin links') && !empty($content->admin_links)) {
+      $output .= "<div class=\"admin-links panel-hide\">" . theme('links', $content->admin_links) . "</div>\n";
+    }
+    if (!empty($content->title)) {
+        if ($content->title == "Comments" ) {
+            $output .= "<h3>What do you think?</h3>";
+        }
+        elseif ($content->title == "Related Posts:") {
+            $output .= '<h3>You may also like...</h3>';
+        }
+      $output .= "<h2 class=\"pane-title\">$content->title</h2>\n";
+    }
+
+    if (!empty($content->feeds)) {
+      $output .= "<div class=\"feed\">" . implode(' ', $content->feeds) . "</div>\n";
+    }
+
+    $output .= "<div class=\"pane-content\">$content->content</div>\n";
+
+    if (!empty($content->links)) {
+      $output .= "<div class=\"links\">" . theme('links', $content->links) . "</div>\n";
+    }
+
+
+    if (!empty($content->more)) {
+      if (empty($content->more['title'])) {
+        $content->more['title'] = t('more');
+      }
+      $output .= "<div class=\"more-link\">" . l($content->more['title'], $content->more['href']) . "</div>\n";
+    }
+
+    $output .= "</div>\n";
+    return $output;
+  }
+}
+
+
+/* custom implementation of the 'more like this' block */
+function Kosmos_apachesolr_mlt_recommendation_block($docs) {
+  $links = array();
+  dd($docs);
+  $count = 0;
+  foreach ($docs as $result) {
+    $count++;
+    if ($count>3) { break; }
+    // Suitable for single-site mode.
+    dd($result->nid);
+    $mlt_node = node_load($result->nid);
+    dd($mlt_node);
+    $date = format_date($mlt_node->created, 'custom', 'n/j/Y');
+    $time = format_date($mlt_node->created, 'custom', 'g:ia');
+    $categories = $mlt_node->taxonomy;
+    $tax = '';
+    if ($categories) {
+        $tax = '<br>Posted in ';
+        foreach ($categories as $category) {
+            $tax .= $category->name . ', ';
+        }
+        $tax = rtrim($tax, ',');
+    }
+    
+    $links[] = l($result->title, $result->path, array('html' => TRUE)) . $tax;
+  }
+  return theme('item_list', $links);
+}
 
 
 function Kosmos_theme() {
