@@ -151,8 +151,6 @@
           <?php //if (!empty($content_top)): ?>
             <div id="content-top" class="clear-block">
 	       <?php if (!empty($messages)): print $messages; endif; ?>
-              <?php if (!empty($title)): ?><h1 class="title" id="page-title"><?php print $title; ?>
-	      </h1><?php endif; ?>
              <?php print $content_top; ?>
             </div>
           <?php //endif; ?>
