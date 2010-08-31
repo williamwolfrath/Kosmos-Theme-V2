@@ -137,7 +137,7 @@ function Kosmos_preprocess_job_posting_node_display(&$vars) {
     else {
         $vars['deadline'] = NULL;
     }
-    $vars['template_file'] = '/sites/all/themes/SpontaneousAcademia/job-posting-node';
+    $vars['template_file'] = '/sites/all/themes/Kosmos/job-posting-node';
     //$vars['template_file'] = 'job-posting-node';
     //$vars['template_files'][] = 'job-posting-node';
     //log_debug('template: ', $vars['template']);
@@ -148,6 +148,7 @@ function Kosmos_preprocess_job_posting_node_display(&$vars) {
 // add the user's main role name to the template
 function Kosmos_preprocess_user_profile(&$vars) {
     //log_debug('preprocess user profile');
+    //dd($vars);
     //log_debug('vars is ', $vars);
     //log_debug('The user object is ', $vars['user']);
     $vars['main_role'] = '';
@@ -177,6 +178,8 @@ function Kosmos_breadcrumb($breadcrumb) {
 
 
 function Kosmos_panels_pane($content, $pane, $display) {
+    dd('panels pane');
+    //dd($content);
   if (!empty($content->content)) {
     $idstr = $classstr = '';
     if (!empty($content->css_id)) {
@@ -196,6 +199,9 @@ function Kosmos_panels_pane($content, $pane, $display) {
         }
         elseif ($content->title == "Related Posts:") {
             $output .= '<h3>You may also like...</h3>';
+        }
+        elseif ($content->title == "Featured posts from the community" ) {
+            $output .= '<h3>The Buzz...</h3>';
         }
       $output .= "<h2 class=\"pane-title\">$content->title</h2>\n";
     }

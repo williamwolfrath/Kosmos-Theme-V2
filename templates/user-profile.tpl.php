@@ -43,6 +43,17 @@
  * @see template_preprocess_user_profile()
  */
 ?>
+<?php //dd('hi'); dd($account); ?>
+<?php
+  //$profile_node = content_profile_load('profile', 175); 
+  //dd('loaded content profile');
+  //dd($profile_node);
+  dd($profile); 
+?>
+<div class="profile-role">
+    <?php //print $main_role; ?>
+    <?php print $account->user_type; ?>
+</div>
 <div class="profile">
   <?php if ( strlen($profile['user_picture']) > 31 ): // prints an empty div if not pic - check string length ?>
     <div id="fb-picture">
@@ -54,15 +65,12 @@
         $profile_user = user_load($account->uid);
         $fbid = $profile_user->facebook_id;
         if (!$fbid) { $fbid = '0'; }  // for some crazy reason which I have yet to discover, omitting this causes all fp:profile-pic calls to return a silhouette. in some browsers. in some views. odd.
-  ?>
-  <fb:profile-pic uid="<?php print $fbid;?>"  size="small" facebook-logo="true" linked="false"></fb:profile-pic>
+        ?>
+        <fb:profile-pic uid="<?php print $fbid;?>"  size="normal" width="150" facebook-logo="true" linked="false"></fb:profile-pic>
   </div>
   <?php endif; ?>
-  <div class="profile-role">
-    <?php //print $main_role; ?>
-    <?php print $account->user_type; ?>
-  </div>
   <?php print $profile['content_profile']; ?>
+   <?php print $messages; ?>
   <?php //print $user_profile; ?>
 </div>
 <?php //print '<pre>'. check_plain(print_r($account, 1)) .'</pre>'; ?>

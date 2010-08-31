@@ -102,9 +102,7 @@
   <script src="/sites/all/themes/Kosmos/js/Myriad_Pro_400.font.js" type="text/javascript"></script>
   <script src="/sites/all/themes/Kosmos/js/Gill_Sans_MT_Pro_500.font.js" type="text/javascript"></script>
   <?php print $scripts; ?>
-  <?php if ($is_front): ?>
     <script type="text/javascript" src="http://www.trumba.com/scripts/spuds.js"></script>
-  <?php endif; ?>
   <script type="text/javascript"><?php /* Needed to avoid Flash of Unstyled Content in IE */ ?> </script>
   <script type="text/javascript">
     Cufon.replace('h1', {fontFamily: 'Myriad Pro'});

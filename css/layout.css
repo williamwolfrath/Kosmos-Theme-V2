@@ -39,8 +39,8 @@ div#footer-wrapper { background:url(../images/footer-bg.jpg) no-repeat scroll ce
 
 
 /* PANELS */
-.panel-3col .panel-col-first, .panel-3col .panel-col-last { width: 20%; }
-.panel-3col .panel-col { width: 60%; }
+.panel-3col .panel-col-first, .panel-3col .panel-col-last { width: 15%; }
+.panel-3col .panel-col { width: 65%; }
 .panel-3col .panel-col .inside { padding-right: 20px; }
 .panel-3col .panel-col .inside { margin: 0; }
 .panel-col-first .panel-pane h2.pane-title { margin: 0; color: #25928c; font-size: 1.1em; }
@@ -48,12 +48,13 @@ div#footer-wrapper { background:url(../images/footer-bg.jpg) no-repeat scroll ce
 #why-join { margin: 20px 0 30px 0; }
 body.page-node .panel-col .panel-separator { margin-bottom: 40px; }
 .panels-related-content .item-list ul li { display: block; width: 30%; float: left; padding: 0 5px; }
-
+.panel-content-profile {}
+body.page-user .panel-3col .panel-col .panel-separator { clear: none; }
 
 
 /* POSTS */
 .recent-post-user-picture-wrapper { float: left; width: 70px; }
-.recent-posts-content .content { padding-right: 20px; }
+.recent-posts-content .content { padding-right: 65px; }
 
 /* VIEWS */
 .view-recent-posts .views-row-odd, .view-recent-posts .views-row-even { margin-bottom: 20px; }
@@ -83,3 +84,16 @@ body.page-node .comment .facebook-user-picture { float: left; width: 70px; }
 .comment .links { padding-left: 70px; margin-bottom: 20px; }
 .comment h3 { margin-bottom: 3px; font-weight: bold; }
 .comment h3 a:link, .comment h3 a:visited { text-decoration: none; }
+
+
+
+/* PROFILE */
+body.page-user #fb-picture { float: right; }
+/* body.page-user #main { width: 60%; } */
+body.page-user .panels-profile-pic { float: right; }
+body.page-user #panels-profile-user-info h1 { margin-bottom: 0; }
+body.page-user #panels-profile-user-info h3 { font-size: 1.1em; margin-bottom: 20px; }
+body.page-user .panel-content-profile { margin-bottom: 30px; }
+body.page-user #panels-profile-groups { width: 50%; float: left; }
+body.page-user #panels-profile-contributions { width: 50%; float: left; }
+body.page-user #panels-profile-groups .pane-content, body.page-user #panels-profile-contributions .pane-content { padding: 5px 20px 0 0; }
