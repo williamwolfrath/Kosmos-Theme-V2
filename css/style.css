@@ -5,6 +5,10 @@ form#search-block-form .search-box input.form-text { background: url(../images/s
 form#search-block-form .search-box .form-submit { position: relative; left: -8px; }
 
 
+/* HEADER */
+a.welcome { text-transform: uppercase; }
+a.welcome:link, a.welcome:visited { color: #98cbc8; text-decoration: none; font-size: 13px; line-height: 19px; }
+
 /* HEADINGS */
 body.front h2, body.front h3 { color: #6e6e6e; }
 
@@ -24,11 +28,19 @@ body.front .recent-posts-content { background: url(../images/balloon.jpg) no-rep
 /* PANELS */
 .panel-col-first ul.menu { text-transform: uppercase; margin-bottom: 40px; }
 .panel-col p { font-size: 1.2em; }
-.panel-col-first ul.menu li.leaf a, body.front .panel-col-first ul.menu li.leaf a:visited { color: #454545; text-decoration: none; }
+.panel-col-first ul.menu li.leaf a, .panel-col-first ul.menu li.leaf a:visited,
+.panel-col-first ul.menu li.expanded a, .panel-col-first ul.menu li.expanded a:visited,
+.panel-col-first ul.menu li.collapsed a, .panel-col-first ul.menu li.collapsed a:visited { color: #454545; text-decoration: none; }
 .panel-col ul { list-style: none; margin: 0; padding: 0; }
 .panel-col ul li { list-style: none; margin: 0; padding: 0; }
 body.page-node .panel-col h2.pane-title { font-size: 2.0em; }
 .panels-related-content h3 { font-size: 1.1em; }
+.panel-3col .panel-col-last .panel-separator { background: url(../images/horizontal-separator.jpg) no-repeat; height: 12px; }
+.panel-3col .panel-col-last h2.pane-title { font-size: 1.6em; color: #464646; }
+body.not-front .panel-3col .panel-col h2.pane-title { font-size: 2em; }
+
+/* LISTS */
+.view-recent-comments-for-user ul li { list-style-type: none; }
 
 /* FOOTER */
 #footer ul.menu li.leaf a, #footer ul.menu li.leaf a:visited  { color: #7e7e7e; text-decoration: none; }
@@ -42,7 +54,7 @@ body.page-node .panel-col p { color: #646464; }
 
 
 /* COMMENTS */
-.comment-content-wrapper { /*background: url(../images/balloon.jpg) no-repeat; */ margin-left: 60px; }
 .comments-panel h3 { font-size: 1.1em; }
-
+.view-recent-comments-for-user .comment-node { color: #6e6e6e; }
+.view-recent-comments-for-user .comment-node a:link, .view-recent-comments-for-user .comment-node a:visited { text-decoration: none; }
 

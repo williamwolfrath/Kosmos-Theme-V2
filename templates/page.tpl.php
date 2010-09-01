@@ -109,6 +109,7 @@
     Cufon.replace('h2', {fontFamily: 'Myriad Pro'})
     Cufon.replace('h3.pane-title', {fontFamily: 'Myriad Pro'});
     Cufon.replace('.panel-col-first ul.menu li', {fontFamily: 'Gill Sans MT Pro'});
+    Cufon.replace('a.welcome', {fontFamily: 'Gill Sans MT Pro'});
   </script>  
 </head>
 
@@ -131,11 +132,23 @@
 		<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
 	    <?php endif; ?>
 	  </div> <!-- /logo-title -->
-	  
-	  <div id="login-reg"><a id="login-link" href="/user"><img src="/sites/all/themes/Kosmos/images/login-link.jpg"/></a><a id="reg-link" href="/user/register"><img src="/sites/all/themes/Kosmos/images/reg-link.jpg"/></a></div>
 	  <?php if (!empty($header)): ?>
 		<?php print $header; ?>
 	  <?php endif; ?>
+	  <div id="header-text">
+	      <span id="header-slogan"><img src="/sites/all/themes/Kosmos/images/header-slogan.jpg"/></span>
+	      <span id="login-reg">
+		<?php global $user; if (user_is_logged_in()): ?>
+		      <a class="welcome" href="/user">Welcome Back, <?php print $user->name; ?></a>
+		      <img src="/sites/all/themes/Kosmos/images/img-dot.jpg"/>
+		      <a id="reg-link" href="/logout"><img src="/sites/all/themes/Kosmos/images/logout-link.jpg"/></a>
+		<?php else: ?>
+		      <a id="login-link" href="/user"><img src="/sites/all/themes/Kosmos/images/login-link.jpg"/></a>
+		      <img src="/sites/all/themes/Kosmos/images/img-dot.jpg"/>
+		      <a id="reg-link" href="/user/register"><img src="/sites/all/themes/Kosmos/images/reg-link.jpg"/></a>
+		<?php endif; ?>
+	      </span>
+	  </div>
 
       </div>
     </div> <!-- /header -->

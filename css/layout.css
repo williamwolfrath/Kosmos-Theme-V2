@@ -1,13 +1,15 @@
 /* HEADER */
-#header { background: url(../images/header1.jpg) top center no-repeat; height: 88px; }
+#header { background: url(../images/header2.jpg) top center no-repeat; height: 88px; }
 #header-inner { width: 950px; height: 88px; margin: 0 auto; position: relative; }
-#logo-title { width: 50%; float: left; }
-#login-reg { width: 117px; height: 19px; background: url(../images/login-reg-bg.jpg) no-repeat; position: absolute; right: 183px; top: 32px; }
+#logo-title { width: 25%; float: left; }
+#login-reg { height: 19px; line-height: 19px; font-size: 15.45px; /*background: url(../images/login-reg-bg.jpg) no-repeat;  *//*position: absolute; right: 183px; top: 32px; */ }
 #login-reg a {  }
-#login-reg #reg-link { position: absolute; right: 0; }
-#header .block-search { width: 182px; height: 24px; position: absolute; right: 0; top: 27px; }
+#login-reg #reg-link {  }
+#header .block-search { width: 182px; height: 24px; float: right; position: relative; top: 27px; }
 form#search-block-form .search-box .form-item { margin: 0; float: left; }
-
+#header-text { /*position: absolute; right: 0;*/ position: relative; float: right;  top: 30px;  height: 19px; line-height: 19px; }
+#header-slogan {  width: 210px; }
+a.welcome { position: relative; top: -3px; }
 
 /* PAGE */
 body.sidebar-right #main { width: 680px; margin-right: 20px; float: left; }
@@ -26,6 +28,14 @@ ul.menu li { list-style: none; margin: 0; }
 #main { margin: 0; }
 #main #content { margin-bottom: 30px; }
 
+
+/* MENUS */
+.panel-col-first ul.menu li.expanded ul { display: none; }
+#secondary li a:link, #secondary li a:visited { text-decoration: none; }
+#secondary li { padding-right: 20px; }
+#secondary { border-bottom: 1px solid #464646; }
+
+
 /* CONTAINER */
 #page #container { background: url(../images/page-bg.jpg) top left no-repeat; }
 #page #container #container-inner { padding: 5px 0 0 30px; }
@@ -39,7 +49,9 @@ div#footer-wrapper { background:url(../images/footer-bg.jpg) no-repeat scroll ce
 
 
 /* PANELS */
-.panel-3col .panel-col-first, .panel-3col .panel-col-last { width: 15%; }
+/* these sizes give it a slightly more balanced look */
+.panel-3col .panel-col-first { width: 15%; }
+.panel-3col .panel-col-last { width: 20%; }
 .panel-3col .panel-col { width: 65%; }
 .panel-3col .panel-col .inside { padding-right: 20px; }
 .panel-3col .panel-col .inside { margin: 0; }
@@ -50,7 +62,7 @@ body.page-node .panel-col .panel-separator { margin-bottom: 40px; }
 .panels-related-content .item-list ul li { display: block; width: 30%; float: left; padding: 0 5px; }
 .panel-content-profile {}
 body.page-user .panel-3col .panel-col .panel-separator { clear: none; }
-
+.panel-3col .panel-col-last h2.pane-title { margin-bottom: 15px; }
 
 /* POSTS */
 .recent-post-user-picture-wrapper { float: left; width: 70px; }
@@ -58,7 +70,7 @@ body.page-user .panel-3col .panel-col .panel-separator { clear: none; }
 
 /* VIEWS */
 .view-recent-posts .views-row-odd, .view-recent-posts .views-row-even { margin-bottom: 20px; }
-
+.view-recent-comments-for-user ul li { margin: 0 0 15px 0; }
 
 /* NODES */
 body.page-node .node .facebook-user-picture { width: 60px; float: right; margin: 0 0 10px 10px; }
@@ -71,7 +83,11 @@ body.page-node .panel-col .node .content { margin-top: 20px; }
 
 /* COMMENTS */
 body.page-node .comment .facebook-user-picture { float: left; width: 70px; }
-.comment-content-wrapper { background: #feffe5 url(../images/balloon-pixel.jpg) 0 0 repeat-x; min-height: 78px; position: relative; }
+.view-recent-comments-for-user .facebook-user-picture { float: left; width: 40px; }
+.comment-content-wrapper { background: #feffe5 url(../images/balloon-pixel.jpg) 0 0 repeat-x; min-height: 78px; position: relative; margin-left: 70px; }
+.view-recent-comments-for-user .comment-content-wrapper { background: url(../images/balloon-small.jpg) no-repeat; min-height: 58px; height: 58px; margin-left: 43px; width: 139px; }
+.view-recent-comments-for-user .comment-content-wrapper .content {  line-height: .9em; padding: 4px 4px 4px 14px; }
+.comment-content-wrapper { /*background: url(../images/balloon.jpg) no-repeat; */ margin-left: 60px; }
 .bl { background: url(../images/bl.jpg) 0 100% no-repeat; min-height: 78px; }
 .br { background: url(../images/br.jpg) 100% 100% no-repeat; }
 .tl { background: url(../images/tl.jpg) 0 0 no-repeat; min-height: 78px;  }
@@ -97,3 +113,9 @@ body.page-user .panel-content-profile { margin-bottom: 30px; }
 body.page-user #panels-profile-groups { width: 50%; float: left; }
 body.page-user #panels-profile-contributions { width: 50%; float: left; }
 body.page-user #panels-profile-groups .pane-content, body.page-user #panels-profile-contributions .pane-content { padding: 5px 20px 0 0; }
+
+
+/* VIDEOS */
+.view-Vimeo .video-thumbnail { width: 40%; float: left; }
+.view-Vimeo .views-row-odd, .view-Vimeo .views-row-even { margin-bottom: 40px; padding: 10px; }
+.view-Vimeo .views-row-odd, .view-Vimeo .views-row-even { background-color: #efefef; }
