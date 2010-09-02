@@ -27,7 +27,6 @@
  */
 ?>
 <div class="comment<?php print ($comment->new) ? ' comment-new' : ''; print ' '. $status ?> clear-block">
-  <?php print $picture ?>
 <div class="facebook-user-picture">
   <div class="facebook-user-picture-inner">
   <?php //print $picture ?>
@@ -35,7 +34,12 @@
     $comment_user = user_load($comment->uid);
     //$facebook_pic_square = safacebook_get_user_photo_square($uid);
   ?>
-  <a href="/user/<?php print $comment_user->uid; ?>"><fb:profile-pic uid="<?php print $comment_user->facebook_id;?>"  size="square" width="35" facebook-logo="true" linked="false"></fb:profile-pic></a>
+  <?php if ( strlen($picture) > 31): ?>
+        <a href="/user/<?php print $recent_post_user->uid; ?>"><?php print $picture ?></a>
+ <?php else: ?>
+        <a href="/user/<?php print $comment_user->uid; ?>"><fb:profile-pic uid="<?php print $comment_user->facebook_id;?>"  size="square" width="35" facebook-logo="true" linked="false"></fb:profile-pic></a>
+  <?php endif; ?>
+
   </div>
   <div class="post-user-name">
     <?php print $comment_user->name; ?>
@@ -51,8 +55,8 @@
         <?php
             
             $replacement = strip_tags($content);
-            if ( strlen($replacement) > 130 ) {
-                  $replacement = substr($replacement, 0, 130) . '...' ;
+            if ( strlen($replacement) > 100 ) {
+                  $replacement = substr($replacement, 0, 100) . '...' ;
             }
         ?>
         <?php print $replacement ?>

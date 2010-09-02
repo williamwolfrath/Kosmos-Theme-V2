@@ -66,39 +66,39 @@ function Kosmos_preprocess_node(&$vars, $hook) {
 
 
 
-function Kosmos_preprocess_search_block_form(&$vars, $hook) {
-
+function Kosmos_preprocess_kosmos_search_form(&$vars, $hook) {
+    dd('preprocess kosmos search');
   // Modify elements of the search form
 //  $vars['form']['search_block_form']['#title'] = t('');
 //  
   // Set a default value for the search box
-  $vars['form']['search_block_form']['#value'] = t('');
-  
-  // Add a custom class to the search box
-  $vars['form']['search_block_form']['#attributes'] = array('class' => 'NormalTextBox txtSearch', 'value' => 'Search',
-    'onfocus' => "if (this.value == 'Search') {this.value = '';}",
-    'onblur' => "if (this.value == '') {this.value = 'Search';}");
-  
-  // Change the text on the submit button
-  //$vars['form']['submit']['#value'] = t('Go');
+  //$vars['form']['search_block_form']['#value'] = t('');
+  //
+  //// Add a custom class to the search box
+  //$vars['form']['search_block_form']['#attributes'] = array('class' => 'NormalTextBox txtSearch', 'value' => 'Search',
+  //  'onfocus' => "if (this.value == 'Search') {this.value = '';}",
+  //  'onblur' => "if (this.value == '') {this.value = 'Search';}");
+  //
+  //// Change the text on the submit button
+  ////$vars['form']['submit']['#value'] = t('Go');
+  ////$vars['form']['type[profile]']['#attributes'] = array('type' => 'hidden', 'value' => 'profile');
   //$vars['form']['type[profile]']['#attributes'] = array('type' => 'hidden', 'value' => 'profile');
-  $vars['form']['type[profile]']['#attributes'] = array('type' => 'hidden', 'value' => 'profile');
-
-  // Rebuild the rendered version (search form only, rest remains unchanged)
-  unset($vars['form']['search_block_form']['#printed']);
-  $vars['search']['search_block_form'] = drupal_render($vars['form']['search_block_form']);
-
+  //
+  //// Rebuild the rendered version (search form only, rest remains unchanged)
+  //unset($vars['form']['search_block_form']['#printed']);
+  //$vars['search']['search_block_form'] = drupal_render($vars['form']['search_block_form']);
+  //
   $vars['form']['submit']['#type'] = 'image_button';
   $vars['form']['submit']['#src'] = path_to_theme() . '/images/search-box-right.jpg';
-
-  // Rebuild the rendered version (submit button, rest remains unchanged)
+  //
+  //// Rebuild the rendered version (submit button, rest remains unchanged)
   unset($vars['form']['submit']['#printed']);
   $vars['search']['submit'] = drupal_render($vars['form']['submit']);
-  
-  $vars['search']['content_type'] = drupal_render($vars['form']['type[profile]']);
-  // Collect all form elements to make it easier to print the whole form.
-  $vars['search_form'] = implode($vars['search']);
-  //log_debug('search form: ', $vars['search_form']);
+  //
+  //$vars['search']['content_type'] = drupal_render($vars['form']['type[profile]']);
+  //// Collect all form elements to make it easier to print the whole form.
+  //$vars['search_form'] = implode($vars['search']);
+  ////log_debug('search form: ', $vars['search_form']);
   
 }
 
@@ -178,7 +178,6 @@ function Kosmos_breadcrumb($breadcrumb) {
 
 
 function Kosmos_panels_pane($content, $pane, $display) {
-    dd('panels pane');
     //dd($content);
   if (!empty($content->content)) {
     $idstr = $classstr = '';

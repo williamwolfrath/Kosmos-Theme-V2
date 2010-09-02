@@ -1,8 +1,6 @@
 /* SEARCH BOX */
-form#search-block-form .search-box { width: 193px; height: 24px; }
-form#search-block-form .search-box label { display: none; }
-form#search-block-form .search-box input.form-text { background: url(../images/search-box-left.jpg) no-repeat; width: 159px; height: 24px; border: none; margin: 0; padding-left: 7px; color: #25928c; line-height: 24px; }
-form#search-block-form .search-box .form-submit { position: relative; left: -8px; }
+#header form#kosmos-search-form .block-ihsgeneral, #header form#kosmos-search-form-1 .block-ihsgeneral { width: 193px; height: 24px; }
+#header form#kosmos-search-form input.form-text, #header form#kosmos-search-form-1 input.form-text { background: url(../images/search-box-left.jpg) no-repeat; width: 159px; height: 24px; border: none; margin: 0; padding-left: 7px; color: #25928c; line-height: 24px; }
 
 
 /* HEADER */
@@ -11,6 +9,7 @@ a.welcome:link, a.welcome:visited { color: #98cbc8; text-decoration: none; font-
 
 /* HEADINGS */
 body.front h2, body.front h3 { color: #6e6e6e; }
+body.not-front .panel-col h2 { font-size: 2em; }
 
 /* CONTENT */
 a, a:visited { color: #25928c; text-decoration: underline; }
@@ -55,6 +54,10 @@ body.page-node .panel-col p { color: #646464; }
 
 /* COMMENTS */
 .comments-panel h3 { font-size: 1.1em; }
-.view-recent-comments-for-user .comment-node { color: #6e6e6e; }
+.view-recent-comments-for-user .comment-node { color: #6e6e6e; clear: left; }
 .view-recent-comments-for-user .comment-node a:link, .view-recent-comments-for-user .comment-node a:visited { text-decoration: none; }
 
+/* GROUPS */
+body.node-type-group .panel-3col .panel-col .panel-separator + .panel-pane h2.pane-title { font-size: 1.5em; }
+body.node-type-group .recent-posts-content { background: url(../images/balloon.jpg) no-repeat; height: 111px; padding-top: 5px; padding-left: 35px; margin-left: 60px; }
+body.not-front .panel-col .recent-posts-content h2 { font-size: 1.5em; padding-right: 65px; }

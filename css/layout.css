@@ -5,8 +5,13 @@
 #login-reg { height: 19px; line-height: 19px; font-size: 15.45px; /*background: url(../images/login-reg-bg.jpg) no-repeat;  *//*position: absolute; right: 183px; top: 32px; */ }
 #login-reg a {  }
 #login-reg #reg-link {  }
-#header .block-search { width: 182px; height: 24px; float: right; position: relative; top: 27px; }
-form#search-block-form .search-box .form-item { margin: 0; float: left; }
+#header .block-ihsgeneral { float: right; position: relative; top: 27px; }
+#header form#kosmos-search-form  .form-item, #header form#kosmos-search-form-1  .form-item { margin: 0; float: left; }
+form#kosmos-search-form label, #header form#kosmos-search-form-1 label { display: none; }
+form#kosmos-search-form input.form-text, #header form#kosmos-search-form-1 input.form-text { margin: 0; }
+form#kosmos-search-form .form-item { margin: 0; }
+form#kosmos-search-form #edit-terms-wrapper { float: left; }
+#header form#kosmos-search-form  #edit-submit, #header form#kosmos-search-form-1  #edit-submit-1 { background: none; border: none; background-image: url(../images/search-box-right.jpg); height: 24px; width: 23px;  position: relative; left: -8px; }
 #header-text { /*position: absolute; right: 0;*/ position: relative; float: right;  top: 30px;  height: 19px; line-height: 19px; }
 #header-slogan {  width: 210px; }
 a.welcome { position: relative; top: -3px; }
@@ -22,11 +27,12 @@ ul.menu li { list-style: none; margin: 0; }
 
 
 /* CONTENT TOP */
-#content-top { margin-bottom: 20px; }
+#content-top { /* margin-bottom: 20px; */}
 
 /* MAIN */
 #main { margin: 0; }
 #main #content { margin-bottom: 30px; }
+#main #kosmos-search-form { height: 40px;  margin-bottom: 20px; }
 
 
 /* MENUS */
@@ -38,8 +44,8 @@ ul.menu li { list-style: none; margin: 0; }
 
 /* CONTAINER */
 #page #container { background: url(../images/page-bg.jpg) top left no-repeat; }
-#page #container #container-inner { padding: 5px 0 0 30px; }
-
+#page #container #container-inner { padding: 0 0 0 30px; }
+body.not-front #page #container #container-inner { padding-top: 20px; }
 
 /* FOOTER */
 #footer { position: relative; }
@@ -63,6 +69,10 @@ body.page-node .panel-col .panel-separator { margin-bottom: 40px; }
 .panel-content-profile {}
 body.page-user .panel-3col .panel-col .panel-separator { clear: none; }
 .panel-3col .panel-col-last h2.pane-title { margin-bottom: 15px; }
+#panels-trumba p { margin-bottom: 5px; }
+#panels-trumba h2.pane-title { margin-bottom: 30px; }
+body.front .panel-3col .panel-col-first, body.front .panel-3col .panel-col-last { padding-top: 20px; }
+
 
 /* POSTS */
 .recent-post-user-picture-wrapper { float: left; width: 70px; }
@@ -71,6 +81,13 @@ body.page-user .panel-3col .panel-col .panel-separator { clear: none; }
 /* VIEWS */
 .view-recent-posts .views-row-odd, .view-recent-posts .views-row-even { margin-bottom: 20px; }
 .view-recent-comments-for-user ul li { margin: 0 0 15px 0; }
+body.page-view .node .facebook-user-picture { width: 60px; float: right; margin: 0 0 10px 10px; }
+body.page-view .views-row-odd,  body.page-view .views-row-even { margin-bottom: 20px; border-bottom: 1px solid #eeeeee; padding-bottom: 15px; }
+body.page-view .panel-col .pane-content { font-size: 1.2em; }
+body.page-view .panel-col .pane-content  h2 a { font-size: 1em; }
+body.page-view .panel-col .pane-content  h2 a:link, body.page-view .panel-col .pane-content  h2 a:visited { text-decoration: none; }
+body.front #panels-slideshow { margin-bottom: 20px; }
+
 
 /* NODES */
 body.page-node .node .facebook-user-picture { width: 60px; float: right; margin: 0 0 10px 10px; }
@@ -84,6 +101,7 @@ body.page-node .panel-col .node .content { margin-top: 20px; }
 /* COMMENTS */
 body.page-node .comment .facebook-user-picture { float: left; width: 70px; }
 .view-recent-comments-for-user .facebook-user-picture { float: left; width: 40px; }
+.view-recent-comments-for-user .facebook-user-picture .post-user-name { line-height: .9em; }
 .comment-content-wrapper { background: #feffe5 url(../images/balloon-pixel.jpg) 0 0 repeat-x; min-height: 78px; position: relative; margin-left: 70px; }
 .view-recent-comments-for-user .comment-content-wrapper { background: url(../images/balloon-small.jpg) no-repeat; min-height: 58px; height: 58px; margin-left: 43px; width: 139px; }
 .view-recent-comments-for-user .comment-content-wrapper .content {  line-height: .9em; padding: 4px 4px 4px 14px; }
@@ -119,3 +137,12 @@ body.page-user #panels-profile-groups .pane-content, body.page-user #panels-prof
 .view-Vimeo .video-thumbnail { width: 40%; float: left; }
 .view-Vimeo .views-row-odd, .view-Vimeo .views-row-even { margin-bottom: 40px; padding: 10px; }
 .view-Vimeo .views-row-odd, .view-Vimeo .views-row-even { background-color: #efefef; }
+
+
+/* GROUPS */
+body.node-type-group div.view-og-ghp-ron { display: none; }
+body.node-type-group .panel-col .pane-content .node .content { margin: 0; }
+body.node-type-group .panel-col  .panel-separator { margin: 0; }
+body.node-type-group #panels-og-recent-posts h2.pane-title { background: url(../images/horizontal-separator-wide.jpg) bottom left no-repeat; height: 45px; margin-bottom: 15px; }
+body.node-type-group .view .node .facebook-user-picture { width: 60px; float: left; margin: 0 10px 10px 0; }
+body.node-type-group .view .node .facebook-user-picture .submitted { display: none; }
