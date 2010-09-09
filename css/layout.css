@@ -11,7 +11,7 @@ form#kosmos-search-form label, #header form#kosmos-search-form-1 label { display
 form#kosmos-search-form input.form-text, #header form#kosmos-search-form-1 input.form-text { margin: 0; }
 form#kosmos-search-form .form-item { margin: 0; }
 form#kosmos-search-form #edit-terms-wrapper { float: left; }
-#header form#kosmos-search-form  #edit-submit, #header form#kosmos-search-form-1  #edit-submit-1 { background: none; border: none; background-image: url(../images/search-box-right.jpg); height: 24px; width: 23px;  position: relative; left: -8px; }
+#header form#kosmos-search-form  .form-submit, #header form#kosmos-search-form-1  .form-submit { background: none; border: none; background-image: url(../images/search-box-right.jpg); height: 24px; width: 23px;  position: relative; left: -8px; }
 #header-text { /*position: absolute; right: 0;*/ position: relative; float: right;  top: 30px;  height: 19px; line-height: 19px; }
 #header-slogan {  width: 210px; }
 a.welcome { position: relative; top: -3px; }
@@ -40,6 +40,7 @@ ul.menu li { list-style: none; margin: 0; }
 #secondary li a:link, #secondary li a:visited { text-decoration: none; }
 #secondary li { padding-right: 20px; }
 #secondary { border-bottom: 1px solid #464646; }
+#panels-add-content-top + .panel-separator { display: none; }
 
 
 /* CONTAINER */
@@ -83,6 +84,7 @@ body.front .panel-3col .panel-col-first, body.front .panel-3col .panel-col-last 
 .view-recent-comments-for-user ul li { margin: 0 0 15px 0; }
 body.page-view .node .facebook-user-picture { width: 60px; float: right; margin: 0 0 10px 10px; }
 body.page-view .views-row-odd,  body.page-view .views-row-even { margin-bottom: 20px; border-bottom: 1px solid #eeeeee; padding-bottom: 15px; }
+body.page-view #panels-people-search .views-row-odd,  body.page-view #panels-people-search .views-row-even { margin-bottom: 20px; background: url(../images/horizontal-dotted.jpg) no-repeat bottom left; border: none; padding-bottom: 15px; }
 body.page-view .panel-col .pane-content { font-size: 1.2em; }
 body.page-view .panel-col .pane-content  h2 a { font-size: 1em; }
 body.page-view .panel-col .pane-content  h2 a:link, body.page-view .panel-col .pane-content  h2 a:visited { text-decoration: none; }
@@ -143,6 +145,30 @@ body.page-user #panels-profile-groups .pane-content, body.page-user #panels-prof
 body.node-type-group div.view-og-ghp-ron { display: none; }
 body.node-type-group .panel-col .pane-content .node .content { margin: 0; }
 body.node-type-group .panel-col  .panel-separator { margin: 0; }
-body.node-type-group #panels-og-recent-posts h2.pane-title { background: url(../images/horizontal-separator-wide.jpg) bottom left no-repeat; height: 45px; margin-bottom: 15px; }
+body.node-type-group #panels-og-recent-posts h2.pane-title, body.node-type-group #panels-og-all-posts h2.pane-title { background: url(../images/horizontal-separator-wide.jpg) bottom left no-repeat; height: 45px; margin-bottom: 15px; }
 body.node-type-group .view .node .facebook-user-picture { width: 60px; float: left; margin: 0 10px 10px 0; }
 body.node-type-group .view .node .facebook-user-picture .submitted { display: none; }
+body.node-type-group #panels-post-stuff { width: 169px; float: right; }
+body.node-type-group #panels-post-stuff + .panel-separator { display: none; }
+body.node-type-group #panels-group-details h2.pane-title { display: none; }
+body.node-type-group #panels-group-details { width: 169px; float: right; }
+body.node-type-group #panels-group-details ul li.first a { display: block; width: 169px; height: 27px; background: url(../images/join-group.jpg) no-repeat; text-indent: -10000in; }
+body.node-type-group #panels-og-more-link { text-align: right; }
+
+
+/* PEOPLE SEARCH */
+#panels-people-search .views-exposed-form .views-exposed-widget { padding: 0; margin: 0; }
+#panels-people-search .views-exposed-form .views-exposed-widget  #edit-keys { background: url(../images/people-search-left.jpg) no-repeat; width: 484px; height: 75px;  border: none; margin: 0; padding: 0; text-indent: 30px; line-height: 18px; font-size: 18px; color: #646464; }
+#panels-people-search .views-exposed-form .views-exposed-widget .form-submit { margin: 0; padding: 0; background: url(../images/people-search-right.jpg) no-repeat; width: 76px; height: 75px; text-indent: -10000in; border: none; }
+#panels-people-search .view-filters { margin-bottom: 30px; }
+#panels-people-search .view-content h2 {  background: url(../images/horizontal-separator-wide.jpg) bottom left no-repeat; height: 45px; margin-bottom: 15px; }
+#panels-people-search .facebook-picture { float: left; width: 110px; }
+#panels-people-search .people-search-user-info { float: left; }
+#panels-people-search .people-search-user-info { font-size: 1.1em; }
+#panels-people-search .people-search-user-info h3 a:link, #panels-people-search .people-search-user-info h3 a:visited { text-decoration: none; font-size: 1.3em; color: #464646; }
+#panels-people-search .people-search-user-info h3 a:hover { text-decoration: underline; }
+
+
+/* LOGIN */
+body.page-user #login-form-name-password-fields { display:none; }
+body.page-user #edit-submit-login { display:none; }
