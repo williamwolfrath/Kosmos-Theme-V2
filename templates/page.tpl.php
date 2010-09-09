@@ -141,7 +141,13 @@
 		<?php global $user; if (user_is_logged_in()): ?>
 		      <a class="welcome" href="/user">Welcome Back, <?php print $user->name; ?></a>
 		      <img src="/sites/all/themes/Kosmos/images/img-dot.jpg"/>
-		      <a id="reg-link" href="/logout"><img src="/sites/all/themes/Kosmos/images/logout-link.jpg"/></a>
+		      
+		      <?php if ( $_SESSION['login_type']!='fb' ): ?>
+			    <a id="reg-link" href="/logout"><img src="/sites/all/themes/Kosmos/images/logout-link.jpg"/></a>
+		      <?php else: ?>
+			    <a href="#" onclick="FB.Connect.logoutAndRedirect('/logout'); return false;"><img src="/sites/all/themes/Kosmos/images/logout-link.jpg"/></a>
+		      <?php endif;?>
+		
 		<?php else: ?>
 		      <a id="login-link" href="/user"><img src="/sites/all/themes/Kosmos/images/login-link.jpg"/></a>
 		      <img src="/sites/all/themes/Kosmos/images/img-dot.jpg"/>
