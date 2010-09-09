@@ -43,6 +43,7 @@ function Kosmos_preprocess_page(&$vars, $hook) {
 function Kosmos_preprocess_node(&$vars, $hook) {
     //dpm($vars);
     //dd($vars);
+    dd('Kosmos preprocess node');
     $vars['date'] = format_date($vars['created'], 'custom', 'n/j/Y');
     $vars['time'] = format_date($vars['created'], 'custom', 'g:ia');
   // Strip tags from teaser
@@ -193,6 +194,8 @@ function Kosmos_panels_pane($content, $pane, $display) {
       $output .= "<div class=\"admin-links panel-hide\">" . theme('links', $content->admin_links) . "</div>\n";
     }
     if (!empty($content->title)) {
+        dd('title:');
+        dd($content->title);
         if ($content->title == "Comments" ) {
             $output .= "<h3>What do you think?</h3>";
         }
@@ -263,7 +266,7 @@ function Kosmos_theme() {
   return array(
     'user_login' => array(
       'arguments' => array('form' => NULL),
-      'template' => 'spontaneous-user-login',  // following convention, replace underscores with dashes
+      'template' => 'templates/spontaneous-user-login',  // following convention, replace underscores with dashes
     )
   );
 }
