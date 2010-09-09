@@ -93,11 +93,7 @@
   </div>
 
   <?php if (!$teaser): ?>
-        <?php if (!user_is_logged_in()): ?>
-            <div id="node-fb-login"><a onclick="FB.Connect.requireSession(); return false;" href="#"><img id="fb_login_image" src="/sites/all/themes/SpontaneousAcademia/images/login-button.gif" alt="Connect" /></a> to post comments.</div>
-        <?php else: ?>
             <?php print $links; ?>
-        <?php endif; ?>
   <?php else: ?>
       <?php if (user_is_logged_in()): ?>
            <?php print $links; ?>
