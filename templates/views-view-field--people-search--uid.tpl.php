@@ -32,7 +32,7 @@
 $profile_node = content_profile_load('profile', $output);
 //dd($profile_node);
 $college = node_load($profile_node->field_university[0]['nid']);
-print '<h3>' . l($profile_user->name, 'user/$output') . '</h3>' . $profile_user->user_type . ', ' . $college->title . ', ' . $profile_node->field_academic_discipline[0]['value'] ;
+print '<h3>' . l($profile_user->name, "user/$output") . '</h3>' . $profile_user->user_type . ', ' . $college->title . ', ' . $profile_node->field_academic_discipline[0]['value'] ;
 ?>
 </div>
 <div class="clear">&nbsp;</div>
