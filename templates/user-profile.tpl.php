@@ -48,7 +48,7 @@
   //$profile_node = content_profile_load('profile', 175); 
   //dd('loaded content profile');
   //dd($profile_node);
-  dd($profile); 
+  //dd($profile); 
 ?>
 <div class="profile-role">
     <?php //print $main_role; ?>
