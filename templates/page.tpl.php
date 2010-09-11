@@ -151,7 +151,7 @@
 		<?php else: ?>
 		      <a id="login-link" href="/user"><img src="/sites/all/themes/Kosmos/images/login-link.jpg"/></a>
 		      <img src="/sites/all/themes/Kosmos/images/img-dot.jpg"/>
-		      <a id="reg-link" href="/user/register"><img src="/sites/all/themes/Kosmos/images/reg-link.jpg"/></a>
+		      <a id="reg-link" href="/user"><img src="/sites/all/themes/Kosmos/images/reg-link.jpg"/></a>
 		<?php endif; ?>
 	      </span>
 	  </div>
