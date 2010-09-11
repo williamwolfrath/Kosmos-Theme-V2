@@ -20,7 +20,7 @@
   * the view is modified.
   */
 ?>
-<?php dd($output); ?>
+<?php //dd($output); ?>
 <?php
         $profile_user = user_load($output);
         $fbid = $profile_user->facebook_id;

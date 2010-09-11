@@ -20,9 +20,9 @@
   * the view is modified.
   */
 ?>
-<?php dd($output); ?>
+<?php //dd($output); ?>
 <?php
 $stripped = strip_tags($output);
-dd($stripped);
+//dd($stripped);
 ?>
 <?php print $stripped; ?>

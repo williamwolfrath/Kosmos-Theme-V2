@@ -43,7 +43,7 @@ function Kosmos_preprocess_page(&$vars, $hook) {
 function Kosmos_preprocess_node(&$vars, $hook) {
     //dpm($vars);
     //dd($vars);
-    dd('Kosmos preprocess node');
+   //dd('Kosmos preprocess node');
     $vars['date'] = format_date($vars['created'], 'custom', 'n/j/Y');
     $vars['time'] = format_date($vars['created'], 'custom', 'g:ia');
   // Strip tags from teaser
@@ -68,7 +68,7 @@ function Kosmos_preprocess_node(&$vars, $hook) {
 
 
 function Kosmos_preprocess_kosmos_search_form(&$vars, $hook) {
-    dd('preprocess kosmos search');
+   //dd('preprocess kosmos search');
   // Modify elements of the search form
 //  $vars['form']['search_block_form']['#title'] = t('');
 //  
@@ -194,8 +194,8 @@ function Kosmos_panels_pane($content, $pane, $display) {
       $output .= "<div class=\"admin-links panel-hide\">" . theme('links', $content->admin_links) . "</div>\n";
     }
     if (!empty($content->title)) {
-        dd('title:');
-        dd($content->title);
+       //dd('title:');
+       //dd($content->title);
         if ($content->title == "Comments" ) {
             $output .= "<h3>What do you think?</h3>";
         }
@@ -235,15 +235,15 @@ function Kosmos_panels_pane($content, $pane, $display) {
 /* custom implementation of the 'more like this' block */
 function Kosmos_apachesolr_mlt_recommendation_block($docs) {
   $links = array();
-  dd($docs);
+ //dd($docs);
   $count = 0;
   foreach ($docs as $result) {
     $count++;
     if ($count>3) { break; }
     // Suitable for single-site mode.
-    dd($result->nid);
+   //dd($result->nid);
     $mlt_node = node_load($result->nid);
-    dd($mlt_node);
+   //dd($mlt_node);
     $date = format_date($mlt_node->created, 'custom', 'n/j/Y');
     $time = format_date($mlt_node->created, 'custom', 'g:ia');
     $categories = $mlt_node->taxonomy;
