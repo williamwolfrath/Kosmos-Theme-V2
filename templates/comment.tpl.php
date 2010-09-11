@@ -27,7 +27,7 @@
  */
 ?>
 <div class="comment<?php print ($comment->new) ? ' comment-new' : ''; print ' '. $status ?> clear-block">
-  <?php print $picture ?>
+  <?php //print $picture ?>
 <div class="facebook-user-picture">
   <div class="facebook-user-picture-inner">
   <?php //print $picture ?>
@@ -35,7 +35,13 @@
     $comment_user = user_load($comment->uid);
     //$facebook_pic_square = safacebook_get_user_photo_square($uid);
   ?>
-  <a href="/user/<?php print $comment_user->uid; ?>"><fb:profile-pic uid="<?php print $comment_user->facebook_id;?>"  size="square" facebook-logo="true" linked="false"></fb:profile-pic></a>
+  
+  <?php if ( strlen($picture) > 31): ?>
+        <a href="/user/<?php print $comment_user->uid; ?>"><?php print $picture ?></a>
+    <?php else: ?>
+        <a href="/user/<?php print $comment_user->uid; ?>"><fb:profile-pic uid="<?php print $comment_user->facebook_id;?>"  size="square" facebook-logo="true" linked="false"></fb:profile-pic></a>
+    <?php endif; ?>
+  
   </div>
   <div class="post-user-name">
     <?php print $comment_user->name; ?>
