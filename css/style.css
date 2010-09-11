@@ -60,6 +60,6 @@ body.page-node .panel-col p { color: #646464; }
 /* GROUPS */
 /*body.node-type-group .panel-3col .panel-col .panel-separator + .panel-pane h2.pane-title { font-size: 1.5em; } */
 body.node-type-group .recent-posts-content { background: url(../images/balloon.jpg) no-repeat; height: 111px; padding-top: 5px; padding-left: 35px; margin-left: 60px; }
-body.not-front .panel-col .recent-posts-content h2 { font-size: 1.5em; padding-right: 65px; }
+body.not-front .panel-col .recent-posts-content h2 { font-size: 1.3em; padding-right: 65px; }
 body.node-type-group #panels-post-stuff + .panel-pane h2.pane-title { font-size: 2.4em; }
 body.node-type-group #panels-og-recent-posts h2.pane-title { font-size: 1.5em; }

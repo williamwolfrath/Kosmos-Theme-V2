@@ -172,3 +172,4 @@ body.node-type-group #panels-og-more-link { text-align: right; }
 /* LOGIN */
 body.page-user #login-form-name-password-fields { display:none; }
 body.page-user #edit-submit-login { display:none; }
+.panel-pane form#user-login-form div.item-list { display: none; }
