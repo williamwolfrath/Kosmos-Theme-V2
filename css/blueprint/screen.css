@@ -21,7 +21,8 @@ table, td, th {vertical-align:middle;}
 blockquote:before, blockquote:after, q:before, q:after {content:"";}
 blockquote, q {quotes:"" "";}
 a img {border:none;}
-a.active { outline: none; }
+a.active { outline: none; border: none;  }
+a:focus { -moz-outline-style: none; border: none; outline: none; }
 
 /* typography.css */
 html {font-size:100.01%;}
