@@ -49,10 +49,22 @@ function Kosmos_preprocess_node(&$vars, $hook) {
   // Strip tags from teaser
   if ($vars['teaser']) {
     // $coreteaser is the teaser without extra cck fields
+    dd('teaser');
+    dd($vars['node']->nid);
+    dd('node type: ' . $vars['node']->type);
+   // if ($vars['node']->nid == 8968) {
+        dd($vars['node']->nid);
+        //dd($vars['node']);
+    //}
     $coreteaser = $vars['node']->content['body']['#value'];
+    // for some reason, job postings don't have the same structure as other node types. there is no content[body][#value]
+    if ($vars['node']->type == "job_posting") {
+        $coreteaser = $vars['node']->content['#value'];
+    }
     // Make sure there is content to strip tags from
     if ($coreteaser) {
       $teaser = $vars['content'];
+      dd($teaser);
       // Calculate position of $coreteaser in $teaser
       $start = strpos($teaser, $coreteaser);
       // Calculate length of core teaser with tags
