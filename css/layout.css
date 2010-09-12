@@ -89,6 +89,7 @@ body.page-view .panel-col .pane-content { font-size: 1.2em; }
 body.page-view .panel-col .pane-content  h2 a { font-size: 1em; }
 body.page-view .panel-col .pane-content  h2 a:link, body.page-view .panel-col .pane-content  h2 a:visited { text-decoration: none; }
 body.front #panels-slideshow { margin-bottom: 20px; }
+body.not-front .panel-col .recent-posts-content h2 { line-height: 1em; }
 
 
 /* NODES */
