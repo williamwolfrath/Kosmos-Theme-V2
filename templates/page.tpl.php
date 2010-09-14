@@ -86,7 +86,6 @@
       <link rel="stylesheet" href="/sites/all/themes/Kosmos/css/blueprint/screen.css" type="text/css" media="screen, projection">
       <link rel="stylesheet" href="/sites/all/themes/Kosmos/css/blueprint/src/grid.css" type="text/css" media="screen, projection">
       <link rel="stylesheet" href="/sites/all/themes/Kosmos/css/blueprint/src/typography.css" type="text/css" media="screen, projection">
-      <link rel="stylesheet" href="/sites/all/themes/Kosmos/css/blueprint/print.css" type="text/css" media="print">	
 	<!--[if lt IE 8]><link rel="stylesheet" href="/sites/all/themes/Kosmos/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
       <?php print $styles; ?>
 	<!--[if IE 6]>
@@ -145,7 +144,7 @@
 		      <?php if ( $_SESSION['login_type']!='fb' ): ?>
 			    <a id="reg-link" href="/logout"><img src="/sites/all/themes/Kosmos/images/logout-link.jpg"/></a>
 		      <?php else: ?>
-			    <a href="#" onclick="FB.Connect.logoutAndRedirect('/logout'); return false;"><img src="/sites/all/themes/Kosmos/images/logout-link.jpg"/></a>
+			    <a href="/logout" onclick="FB.Connect.logoutAndRedirect('/logout'); return true;"><img src="/sites/all/themes/Kosmos/images/logout-link.jpg"/></a>
 		      <?php endif;?>
 		
 		<?php else: ?>
@@ -185,6 +184,7 @@
         <?php if (!empty($mission)): ?><div id="mission"><?php print $mission; ?></div><?php endif; ?>
 
         <div id="content">
+	  <?php if (!empty($title)): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
           <?php if (!empty($content_prefix)) { print $content_prefix; } ?>
           <?php if (!empty($tabs)): ?><div class="tabs"><?php print $tabs; ?></div><?php endif; ?>
          
