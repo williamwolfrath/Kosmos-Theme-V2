@@ -66,5 +66,6 @@
   </div>
     </div></div></div></div></div></div></div>
   <?php print $links ?>
+<div class="ajax-comment-reply"></div>
 
 </div>

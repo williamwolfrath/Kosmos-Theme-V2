@@ -26,6 +26,17 @@ function firefoxFixes() {
 }
 
 
+function commentReplyAdjustments() {
+    //load the reply form on the same page
+    $('a[href^=/comment/reply]').click(function() {
+        var commentBox = $(this).parent().parent('ul.links').siblings('.ajax-comment-reply')[0];
+        $(commentBox).load($(this).attr('href') + ' #main .box');
+        return false;
+    });      
+}
+
+
+
 function userRegHelp() {
     // a quick way to get a small help button in the reg form.
     // this will work using javascript popup anyway, so I don't mind using javascript to add it to the form.
@@ -59,4 +70,7 @@ jQuery(document).ready(function($){
 
     //$('a[href^=/user/register]').parent().parent().hide();
     $('form#user-login').parent().siblings('.tabs').hide();
+    
+    commentReplyAdjustments();
+    
 });
