@@ -60,11 +60,7 @@
     if (!$fbid) { $fbid = '0'; }  // for some crazy reason which I have yet to discover, omitting this causes all fp:profile-pic calls to return a silhouette. in some browsers. in some views. odd.
     //$facebook_pic_square = safacebook_get_user_photo_square($uid);
   ?>
-  <?php if ( strlen($picture) > 31): ?>
-        <a href="/user/<?php print $recent_post_user->uid; ?>"><?php print $picture ?></a>
-    <?php else: ?>
-         <a href="/user/<?php print $recent_post_user->uid; ?>"><fb:profile-pic uid="<?php print $fbid;?>"  size="square" facebook-logo="true" linked="false"></fb:profile-pic></a>
-   <?php endif; ?>
+   <?php print theme('kosmos_user_picture', $recent_post_user, $fbid); ?>
    </div>   
 
   <div class="recent-post-user-name">
