@@ -25,8 +25,12 @@
         $profile_user = user_load($output);
         $fbid = $profile_user->facebook_id;
         if (!$fbid) { $fbid = '0'; }  // for some crazy reason which I have yet to discover, omitting this causes all fp:profile-pic calls to return a silhouette. in some browsers. in some views. odd.
-        print '<div class="facebook-picture"><fb:profile-pic uid="' . $fbid . '"  size="normal" width="100" facebook-logo="true" linked="false"></fb:profile-pic></div>';
+        //print '<div class="facebook-picture"><fb:profile-pic uid="' . $fbid . '"  size="normal" width="100" facebook-logo="true" linked="false"></fb:profile-pic></div>';
 ?>
+<div class="facebook-picture">
+<?php print theme('kosmos_user_picture', $profile_user, $fbid, 100); ?>
+</div>
+
 <div class="people-search-user-info">
 <?php
 $profile_node = content_profile_load('profile', $output);
