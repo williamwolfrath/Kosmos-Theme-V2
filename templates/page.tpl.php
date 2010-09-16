@@ -144,7 +144,7 @@
 		      <?php if ( $_SESSION['login_type']!='fb' ): ?>
 			    <a id="reg-link" href="/logout"><img src="/sites/all/themes/Kosmos/images/logout-link.jpg"/></a>
 		      <?php else: ?>
-			    <a href="/logout" onclick="FB.Connect.logoutAndRedirect('/logout'); return true;"><img src="/sites/all/themes/Kosmos/images/logout-link.jpg"/></a>
+			    <a href="/logout" onclick="FB.Connect.logoutAndRedirect('/logout'); return false;"><img src="/sites/all/themes/Kosmos/images/logout-link.jpg"/></a>
 		      <?php endif;?>
 		
 		<?php else: ?>
