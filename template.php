@@ -74,6 +74,11 @@ function Kosmos_preprocess_node(&$vars, $hook) {
 }
 
 
+//function Kosmos_preprocess_user_login(&$vars) {
+//    $vars['rendered'] = drupal_render($vars['form']);
+//}
+
+
 
 function Kosmos_preprocess_kosmos_search_form(&$vars, $hook) {
    //dd('preprocess kosmos search');
