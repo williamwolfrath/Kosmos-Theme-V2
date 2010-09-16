@@ -172,6 +172,8 @@ body.node-type-group #panels-og-more-link { text-align: right; }
 
 
 /* LOGIN */
-body.page-user #login-form-name-password-fields { display:none; }
-body.page-user #edit-submit-login { display:none; }
+/*body.page-user #login-form-name-password-fields { display:none; }*/
+/*body.page-user #edit-submit-login { display:none; }*/
 .panel-pane form#user-login-form div.item-list { display: none; }
+#custom-login-left { width: 45%; float: left; border: 2px solid #888888; padding: 10px; }
+#custom-login-right { float: right; border: 2px solid #6e6e6e;  width: 45%; padding: 20px; margin-bottom: 60px; }
