@@ -169,7 +169,32 @@ body.node-type-group #panels-og-more-link { text-align: right; }
 #panels-people-search .people-search-user-info { font-size: 1.1em; }
 #panels-people-search .people-search-user-info h3 a:link, #panels-people-search .people-search-user-info h3 a:visited { text-decoration: none; font-size: 1.3em; color: #464646; }
 #panels-people-search .people-search-user-info h3 a:hover { text-decoration: underline; }
-
+#panels-people-search div.view-filters { display: none; }
+/* TAKE 2... */
+/* University people search */
+#views-exposed-form-tax-people-search-panel-pane-1 { margin-bottom: 30px; }
+#views-exposed-form-tax-people-search-panel-pane-1 #edit-tid { background: url(../images/people-search-left.jpg) no-repeat; width: 484px; height: 75px;  border: none; margin: 0; padding: 0; text-indent: 30px; line-height: 75px; font-size: 18px; color: #646464; }
+#views-exposed-form-tax-people-search-panel-pane-1 #edit-submit { margin: 0; padding: 0; background: url(../images/people-search-right.jpg) no-repeat; width: 76px; height: 75px; text-indent: -10000in; border: none; }
+#views-exposed-form-tax-people-search-panel-pane-1 .views-exposed-form .views-exposed-widget { padding: 0; margin: 0; }
+/* Research Interests */
+#views-exposed-form-tax-people-search-panel-pane-2 { margin-bottom: 30px; }
+#views-exposed-form-tax-people-search-panel-pane-2 #edit-tid { background: url(../images/people-search-left.jpg) no-repeat; width: 484px; height: 75px;  border: none; margin: 0; padding: 0; text-indent: 30px; line-height: 75px; font-size: 18px; color: #646464; }
+#views-exposed-form-tax-people-search-panel-pane-2 #edit-submit { margin: 0; padding: 0; background: url(../images/people-search-right.jpg) no-repeat; width: 76px; height: 75px; text-indent: -10000in; border: none; }
+#views-exposed-form-tax-people-search-panel-pane-2 .views-exposed-form .views-exposed-widget { padding: 0; margin: 0; }
+/* Courses Taught */
+#views-exposed-form-tax-people-search-panel-pane-3 { margin-bottom: 30px; }
+#views-exposed-form-tax-people-search-panel-pane-3 #edit-tid { background: url(../images/people-search-left.jpg) no-repeat; width: 484px; height: 75px;  border: none; margin: 0; padding: 0; text-indent: 30px; line-height: 75px; font-size: 18px; color: #646464; }
+#views-exposed-form-tax-people-search-panel-pane-3 #edit-submit { margin: 0; padding: 0; background: url(../images/people-search-right.jpg) no-repeat; width: 76px; height: 75px; text-indent: -10000in; border: none; }
+#views-exposed-form-tax-people-search-panel-pane-3 .views-exposed-form .views-exposed-widget { padding: 0; margin: 0; }
+/* search tabs */
+#panels-people-search-tabs { margin-top: 10px; }
+#panels-people-search-tabs h2.pane-title { width: 100px; float: left; }
+#panels-people-search-tabs ul.menu li { float: left; }
+#panels-people-search-tabs ul.menu li a:link, #panels-people-search-tabs ul.menu li a:visited { text-decoration: none; color: #25928c; }
+#panels-people-search-tabs ul.menu li a { width: 134px; height:30px; background: url(../images/research-tab.jpg) no-repeat; line-height: 30px; font-size: 12px; display: block; padding-left: 12px; }
+#panels-people-search-tabs ul.menu li.first a { width: 82px; height:30px; background: url(../images/university-tab.jpg) no-repeat; line-height: 30px; font-size: 12px; display: block; padding-left: 14px; }
+#panels-people-search-tabs ul.menu li.last a { width: 70px; height:30px; background: url(../images/courses-tab.jpg) no-repeat; line-height: 30px; font-size: 12px; display: block; padding-left: 16px; }
+#panels-people-search-tabs ul.menu li a.active { background-position: 0 -30px; position: relative; top: 1px; }
 
 /* LOGIN */
 /*body.page-user #login-form-name-password-fields { display:none; }*/
