@@ -11,6 +11,8 @@ form#kosmos-search-form label, #header form#kosmos-search-form-1 label { display
 form#kosmos-search-form input.form-text, #header form#kosmos-search-form-1 input.form-text { margin: 0; }
 form#kosmos-search-form .form-item { margin: 0; }
 form#kosmos-search-form #edit-terms-wrapper { float: left; }
+body.page-kosmos-search form#kosmos-search-page-form #edit-terms-wrapper { float: left; margin: 0; }
+body.page-kosmos-search form#kosmos-search-page-form input#edit-terms { margin: 0 10px 0 0 ; }
 #header form#kosmos-search-form  .form-submit, #header form#kosmos-search-form-1  .form-submit { background: none; border: none; background-image: url(../images/search-box-right.jpg); height: 24px; width: 23px;  position: relative; left: -8px; }
 #header-text { /*position: absolute; right: 0;*/ position: relative; float: right;  top: 30px;  height: 19px; line-height: 19px; }
 #header-slogan {  width: 210px; }
@@ -70,7 +72,7 @@ body.page-node #panels-breadcrumb + .panel-separator { margin-bottom: 10px; }
 .panels-related-content .item-list ul li { display: block; width: 30%; float: left; padding: 0 5px; }
 .panel-content-profile {}
 body.page-user .panel-3col .panel-col .panel-separator { clear: none; }
-.panel-3col .panel-col-last h2.pane-title { margin-bottom: 15px; }
+.panel-3col .panel-col-last h2.pane-title { margin-bottom: .5em; }
 #panels-trumba p { margin-bottom: 5px; }
 #panels-trumba h2.pane-title { margin-bottom: 30px; }
 body.front .panel-3col .panel-col-first, body.front .panel-3col .panel-col-last { padding-top: 20px; }
@@ -78,7 +80,7 @@ body.front .panel-3col .panel-col-first, body.front .panel-3col .panel-col-last 
 
 /* POSTS */
 .recent-post-user-picture-wrapper { float: left; width: 70px; }
-.recent-posts-content .content { padding-right: 65px; }
+.recent-posts-content .content { padding-right: 70px; line-height: 1.1em; }
 
 /* VIEWS */
 .view-recent-posts .views-row-odd, .view-recent-posts .views-row-even { margin-bottom: 20px; }
@@ -86,11 +88,12 @@ body.front .panel-3col .panel-col-first, body.front .panel-3col .panel-col-last 
 body.page-view .node .facebook-user-picture { width: 60px; float: right; margin: 0 0 10px 10px; }
 body.page-view .views-row-odd,  body.page-view .views-row-even { margin-bottom: 20px; border-bottom: 1px solid #eeeeee; padding-bottom: 15px; }
 body.page-view #panels-people-search .views-row-odd,  body.page-view #panels-people-search .views-row-even { margin-bottom: 20px; background: url(../images/horizontal-dotted.jpg) no-repeat bottom left; border: none; padding-bottom: 15px; }
-body.page-view .panel-col .pane-content { font-size: 1.2em; }
+body.page-view .panel-col .pane-content { font-size: 1em; }
 body.page-view .panel-col .pane-content  h2 a { font-size: 1em; }
 body.page-view .panel-col .pane-content  h2 a:link, body.page-view .panel-col .pane-content  h2 a:visited { text-decoration: none; }
 body.front #panels-slideshow { margin-bottom: 20px; }
 body.not-front .panel-col .recent-posts-content h2 { line-height: 1em; }
+body.front .view-recent-posts h2 { margin-bottom: 2px; padding-right: 70px; line-height: 1em; }
 
 
 /* NODES */
@@ -150,8 +153,8 @@ body.node-type-group .panel-col  .panel-separator { margin: 0; }
 body.node-type-group #panels-og-recent-posts h2.pane-title, body.node-type-group #panels-og-all-posts h2.pane-title { background: url(../images/horizontal-separator-wide.jpg) bottom left no-repeat; height: 45px; margin-bottom: 15px; }
 body.node-type-group .view .node .facebook-user-picture { width: 60px; float: left; margin: 0 10px 10px 0; }
 body.node-type-group .view .node .facebook-user-picture .submitted { display: none; }
-body.node-type-group #panels-post-stuff { width: 169px; float: right; }
-body.node-type-group #panels-post-stuff + .panel-separator { display: none; }
+#panels-post-stuff { width: 169px; float: right; }
+#panels-post-stuff + .panel-separator { display: none; }
 body.node-type-group #panels-group-details h2.pane-title { display: none; }
 body.node-type-group #panels-group-details { width: 169px; float: right; }
 body.node-type-group #panels-group-details ul li.first a { display: block; width: 169px; height: 27px; background: url(../images/join-group.jpg) no-repeat; text-indent: -10000in; }
@@ -188,7 +191,7 @@ body.node-type-group #panels-og-more-link { text-align: right; }
 #views-exposed-form-tax-people-search-panel-pane-3 .views-exposed-form .views-exposed-widget { padding: 0; margin: 0; }
 /* search tabs */
 #panels-people-search-tabs { margin-top: 10px; }
-#panels-people-search-tabs h2.pane-title { width: 100px; float: left; }
+#panels-people-search-tabs h2.pane-title { width: 100px; float: left; margin-bottom: 0;}
 #panels-people-search-tabs ul.menu li { float: left; }
 #panels-people-search-tabs ul.menu li a:link, #panels-people-search-tabs ul.menu li a:visited { text-decoration: none; color: #25928c; }
 #panels-people-search-tabs ul.menu li a { width: 134px; height:30px; background: url(../images/research-tab.jpg) no-repeat; line-height: 30px; font-size: 12px; display: block; padding-left: 12px; }

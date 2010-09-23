@@ -261,13 +261,13 @@ function Kosmos_apachesolr_mlt_recommendation_block($docs) {
     $time = format_date($mlt_node->created, 'custom', 'g:ia');
     $categories = $mlt_node->taxonomy;
     $tax = '';
-    if ($categories) {
-        $tax = '<br>Posted in ';
-        foreach ($categories as $category) {
-            $tax .= $category->name . ', ';
-        }
-        $tax = rtrim($tax, ',');
-    }
+    //if ($categories) {
+    //    $tax = '<br>Posted in ';
+    //    foreach ($categories as $category) {
+    //        $tax .= $category->name . ', ';
+    //    }
+    //    $tax = rtrim($tax, ',');
+    //}
     
     $links[] = l($result->title, $result->path, array('html' => TRUE)) . $tax;
   }

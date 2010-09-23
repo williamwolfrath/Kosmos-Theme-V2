@@ -85,7 +85,6 @@
   
       <link rel="stylesheet" href="/sites/all/themes/Kosmos/css/blueprint/screen.css" type="text/css" media="screen, projection">
       <link rel="stylesheet" href="/sites/all/themes/Kosmos/css/blueprint/src/grid.css" type="text/css" media="screen, projection">
-      <link rel="stylesheet" href="/sites/all/themes/Kosmos/css/blueprint/src/typography.css" type="text/css" media="screen, projection">
 	<!--[if lt IE 8]><link rel="stylesheet" href="/sites/all/themes/Kosmos/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
       <?php print $styles; ?>
 	<!--[if IE 6]>

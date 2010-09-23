@@ -1,3 +1,5 @@
+
+
 /* SEARCH BOX */
 #header form#kosmos-search-form .block-ihsgeneral, #header form#kosmos-search-form-1 .block-ihsgeneral { width: 193px; height: 24px; }
 #header form#kosmos-search-form input.form-text, #header form#kosmos-search-form-1 input.form-text { background: url(../images/search-box-left.jpg) no-repeat; width: 159px; height: 24px; border: none; margin: 0; padding-left: 7px; color: #25928c; line-height: 24px; }
@@ -9,7 +11,7 @@ a.welcome:link, a.welcome:visited { color: #98cbc8; text-decoration: none; font-
 
 /* HEADINGS */
 body.front h2, body.front h3 { color: #6e6e6e; }
-body.not-front .panel-col h2 { font-size: 2em; }
+body.not-front .panel-col h2 { font-size: 1.6em; }
 
 /* CONTENT */
 a, a:visited { color: #25928c; text-decoration: underline; }
@@ -25,18 +27,19 @@ body.front .recent-posts-content { background: url(../images/balloon.jpg) no-rep
 .recent-posts-content h2 a  { font-size: 1.05em; font-weight: bold;  text-decoration: none; }
 
 /* PANELS */
+.panel-col-first, .panel-col-last { font-size: 10px; }
 .panel-col-first ul.menu { text-transform: uppercase; margin-bottom: 40px; }
-.panel-col p { font-size: 1.2em; }
+.panel-col p { font-size: 1em; }
 .panel-col-first ul.menu li.leaf a, .panel-col-first ul.menu li.leaf a:visited,
 .panel-col-first ul.menu li.expanded a, .panel-col-first ul.menu li.expanded a:visited,
-.panel-col-first ul.menu li.collapsed a, .panel-col-first ul.menu li.collapsed a:visited { color: #454545; text-decoration: none; }
+.panel-col-first ul.menu li.collapsed a, .panel-col-first ul.menu li.collapsed a:visited { color: #222222; text-decoration: none; }
 .panel-col ul { list-style: none; margin: 0; padding: 0; }
 .panel-col ul li { list-style: none; margin: 0; padding: 0; }
 body.page-node .panel-col h2.pane-title { font-size: 2.0em; }
 .panels-related-content h3 { font-size: 1.1em; }
 .panel-3col .panel-col-last .panel-separator { background: url(../images/horizontal-separator.jpg) no-repeat; height: 12px; }
 .panel-3col .panel-col-last h2.pane-title { font-size: 1.6em; color: #464646; }
-body.not-front .panel-3col .panel-col h2.pane-title { font-size: 2em; }
+body.not-front .panel-3col .panel-col h2.pane-title { font-size: 1.7em; }
 
 /* LISTS */
 .view-recent-comments-for-user ul li { list-style-type: none; }
@@ -54,7 +57,7 @@ body.page-node .panel-col p { color: #646464; }
 
 /* COMMENTS */
 .comments-panel h3 { font-size: 1.1em; }
-.view-recent-comments-for-user .comment-node { color: #6e6e6e; clear: left; }
+.view-recent-comments-for-user .comment-node { color: #6e6e6e; clear: left; line-height: 1em; }
 .view-recent-comments-for-user .comment-node a:link, .view-recent-comments-for-user .comment-node a:visited { text-decoration: none; }
 
 /* GROUPS */
